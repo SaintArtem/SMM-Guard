@@ -1,0 +1,91 @@
+// ! INDEX
+@media (max-width: 1800px) {
+  .intro-image {
+    width: 700px;
+    height: 645px;
+  }
+}
+
+@media (max-width: 1599px) {
+  .intro__inner {
+    padding-top: 170px;
+  }
+
+  .intro-image {
+    width: 580px;
+    height: 500px;
+  }
+
+  .hp-intro {
+    height: 800px;
+  }
+
+  body {
+    font-size: 14px;
+  }
+
+  .btn {
+    font-size: 14px;
+  }
+
+  .logo {
+    margin-right: 60px;
+
+    a {
+      width: 140px;
+    }
+  }
+
+  .main-title {
+    font-size: 34px;
+    line-height: 36px;
+    max-width: 440px;
+  }
+
+  .intro-text__image {
+    img {
+      width: 460px;
+    }
+  }
+
+  .intro-text__info {
+    max-width: 390px;
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1439px) {
+  .intro-image {
+    right: 40px;
+  }
+}
+
+@media (max-width: 1150px) {
+  .intro-image {
+    right: 0px;
+    width: 520px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .intro-image {
+    display: none;
+  }
+
+  .intro-text {
+    padding-top: 175px;
+  }
+
+  .login, .header-nav {
+    display: none;
+  }
+
+  .intro-text__info {
+    max-width: 100%;
+  }
+
+    .menu--mobile {
+      display: block;
+    }
+}

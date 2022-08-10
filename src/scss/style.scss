@@ -1,0 +1,291 @@
+@use "reset.scss";
+@use "mixins.scss";
+@use "general.scss";
+@import "variables.scss";
+
+// ! INDEX: Intro
+.hp-intro {
+   width: 100%;
+   height: 955.5px;
+   background: url('../img/intro-bg.svg') no-repeat center top / cover;
+}
+
+.intro-image {
+   display: block;
+   width: 764.9px;
+   height: 622.04px;
+   position: absolute;
+   top: 160px;
+   right: 100px;
+
+   img {
+      object-fit: contain;
+      width: 100%;
+      height: 100%;
+      display: block;
+   }
+}
+
+.intro-text {
+   max-width: 520px;
+   padding-top: 20%;
+}
+
+.intro-text__title {
+   margin-bottom: 20px;
+}
+
+.intro-text__image {
+   margin-bottom: 20px;
+}
+
+.intro-text__info {
+   width: 100%;
+   margin-bottom: 20px;
+   font-size: 20px;
+}
+
+.intro-image__illustration-block-3,
+.intro-image__illustration-block-2,
+.intro-image__illustration-block-1 {
+   display: none;
+}
+
+.intro-text__solid {
+   margin-right: 15px;
+}
+
+// ! INDEX: Quick order
+.order-form {
+   width: 100%;
+   height: 900px;
+   background: $solidBtnColor;
+}
+
+// ! INDEX: Trigger
+.trigger-section {
+   padding-top: 120px;
+   height: 1153px;
+   margin-bottom: 9px;
+   position: relative;
+   position: relative;
+
+   &::before {
+      content: "";
+      position: absolute;
+      top: 0px;
+      bottom: 0px;
+      right: 0pc;
+      left: 0px;
+      z-index: -1;
+      background: url('../img/trigger-bg.png') no-repeat center top / contain;
+   }
+}
+
+.trigger-title-block {
+   margin-bottom: 120px;
+}
+
+.big-trigger__block {
+   position: absolute;
+   left: -35px;
+   top: -55px;
+}
+
+.trigger-section__content {
+   position: relative;
+}
+
+.triggers {
+   position: relative;
+   left: 75px; // !
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   grid-gap: 30px;
+   max-width: 570px;
+   margin-left: auto;
+}
+
+.trigger-block__icon {
+   margin-bottom: 30px;
+}
+
+.trigger-block__title {
+   font-size: 22px;
+   font-weight: 700;
+   margin-bottom: 20px;
+}
+
+// ! INDEX: Reviews
+
+.reviews-section__wrapper {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-gap: 0px 20px;
+   margin-bottom: 56px;
+}
+
+.review-card {
+   border-radius: 10px;
+   background-color: $review-bg;
+   padding: 15px;
+}
+
+.user-info {
+   display: flex;
+   align-items: center;
+   margin-bottom: 15px;
+}
+
+.user-review {
+   margin-bottom: 20px;
+}
+
+.reviews-section {
+   padding: 0 0 40px;
+}
+
+.user-pic-block {
+   margin-right: 10px;
+}
+
+.user-name {
+   font-size: 18px;
+   font-weight: 700;
+}
+
+.post-date {
+   font-size: 14px;
+}
+
+.given-rate {
+   margin-left: auto;
+}
+
+.read-more-btn {
+   display: block;
+   margin-left: auto;
+   background-color: transparent;
+   position: relative;
+   color: $solidBtnColor;
+   font-size: 16px;
+
+   &::before {
+      transition: $tr-animate;
+      content: "";
+      display: block;
+      position: absolute;
+      width: 0%;
+      height: 1px;
+      left: 0px;
+      bottom: 0px;
+      background-color: $solidBtnColor;
+   }
+}
+
+.solid-btn-reviews {
+   background-color: $solidBtnColor;
+   color: #fff;
+   margin: 0 auto;
+   display: block;
+   max-width: 165px;
+}
+
+// * hover
+
+.solid-btn-reviews:hover {
+   @include mixins.button(common);
+}
+
+.read-more-btn:hover {
+   &::before {
+      width: 100%;
+   }
+}
+
+// ! INDEX: faq
+.faq {
+   padding: 40px 0 40px;
+}
+
+.msg-us {
+   font-weight: 700;
+   color: $subtitle;
+   position: relative;
+
+   &::before {
+      content: '';
+      background: $subtitle;
+      display: block;
+      position: absolute;
+      bottom: 0px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      transition: $tr-animate;
+   }
+}
+
+.faq-block {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-gap: 30px;
+   align-items: start;
+}
+
+.faq-card {
+   position: relative;
+   padding: 25px 20px;
+   border-radius: 10px;
+   transition: $tr-nav-btn;
+   max-width: 100%;
+   width: 100%;
+   background-color: $faqCard;
+   cursor: pointer;
+
+   &::before {
+      content: "";
+      z-index: 14;
+      position: absolute;
+      right: 20px;
+      top: 35px;
+      display: block;
+      width: 9px;
+      height: 11px;
+      background: url('../img/icons/faq-arrow.svg') no-repeat center center;
+      transform: translate(0, -50%) rotate(0deg);
+   }
+}
+
+.faq-card.active {
+   transition: $tr-nav-btn;
+   background-color: $faqCardHover;
+
+   &::before {
+      transition: $tr-nav-btn;
+      transform: translate(0, -50%) rotate(180deg);
+   }
+}
+
+.faq-card__title {
+   color: $subtitle;
+}
+
+.faq-answear {
+   margin-top: 30px;
+}
+
+// * hover
+
+.msg-us:hover {
+   &::before {
+      width: 100%;
+   }
+}
+
+.faq-card:hover {
+   transition: $tr-nav-btn;
+   background-color: $faqCardHover;
+}
+
+@import "media.scss";

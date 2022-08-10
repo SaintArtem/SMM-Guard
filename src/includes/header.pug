@@ -1,0 +1,46 @@
+.header__inner
+  .logo
+    a(href="#")
+        img(src="img/icons/logo.svg")
+  nav 
+    ul.header-nav
+        li.header-nav__li
+          a.header-nav__link(href="#") Services
+        li.header-nav__li
+          a.header-nav__link(href="#") Reviews
+        li.header-nav__li
+          a.header-nav__link(href="#") Support
+        li.header-nav__li
+          a.header-nav__link(href="#") Contancts
+  .login
+    .logged-out 
+        a(href="#" class="btn transparent-btn log-in-btn") Log In
+        a(href="#" class="btn solid-btn create-acc-btn") Create Account
+    .logged-in.hidden
+        a(href="#" class="btn") Personal Cabinet
+  .menu--mobile
+    button(type="button" class="menu--mobile__button")
+      span.line.line--1 
+      span.line.line--2 
+      span.line.line--3 
+    .menu--mobile__wrapper
+      .menu--mobile__overlay
+      .menu--mobile__content
+        .menu--mobile__header 
+          p.menu--mobile__title Menu 
+          button(type="button" class="menu--mobile__close-button")
+        nav 
+          ul.header-nav--mobile
+            li.header-nav--mobile__li
+                a.header-nav--mobile__link(href="#") Services
+            li.header-nav--mobile__li
+                a.header-nav--mobile__link(href="#") Reviews
+            li.header-nav--mobile__li
+                a.header-nav--mobile__link(href="#") Support
+            li.header-nav--mobile__li
+                a.header-nav--mobile__link(href="#") Contancts
+        .login--mobile
+          .logged-out--mobile
+            a(href="#" class="btn log-in-btn solid-btn log-in-btn--mobile") Log In
+          .logged-in.hidden
+            a(href="#" class="btn personal-cabinet-btn")
